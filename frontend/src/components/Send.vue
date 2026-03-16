@@ -2,6 +2,7 @@
 import {ref} from "vue"
 import { useRouter,useRoute } from "vue-router";
 import api from "../services/api"
+import "./Send.css"
 
 const router = useRouter()
 const route = useRoute()

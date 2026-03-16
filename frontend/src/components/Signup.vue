@@ -2,6 +2,7 @@
 import {ref} from "vue"
 import {useRouter} from "vue-router"
 import api from "../services/api"
+import "./Signup.css"
 
 const firstName= ref("")
 const lastName= ref("")
