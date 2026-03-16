@@ -22,9 +22,9 @@ const handlesubmit= async()=>{
     try{
         const response=await api.post("/user/signup",{
             username: username.value,
-            firstName= firstName.value,
-            password=password.value,
-            lastName=lastName.value
+            firstName: firstName.value,
+            password: password.value,
+            lastName: lastName.value
         })
         localStorage.setItem("token",response.data.token)
         localStorage.setItem("username", username.value)

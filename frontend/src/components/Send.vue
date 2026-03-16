@@ -13,14 +13,14 @@ const recipientid= route.query.id
 const recipientname= route.query.name
 
 const handlesubmit = async ()=>{
-    if (!amount || amount<=0){
+    if (!amount.value || Number(amount.value)<=0){
         alert("please enter a valid amount ")
         return
     }
     try{
         const res = await api.post("/account/transfer",{
             to : recipientid,
-            amount: Number(amount)
+            amount: Number(amount.value)
         })
         alert("Transfer Sucessful")
         setTimeout(() => {

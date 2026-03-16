@@ -19,7 +19,7 @@ const handlelogout=()=>{
 }
 const fetchuser= async ()=>{
     try{
-        const res= await api.get(`/user/bulk?filter=${filter}`)
+        const res= await api.get(`/user/bulk?filter=${filter.value}`)
         const loggedinuser= localStorage.getItem("username")
         const filteruser=res.data.users.filter(user=>
             {
